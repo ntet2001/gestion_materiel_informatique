@@ -1,0 +1,41 @@
+/*style on my navbar and list*/
+ul{
+    padding-left: 0px;
+}
+li{
+    list-style: none;
+    margin-top: 10%;
+    border: 1px solid rgb(99, 99, 233);
+    border-radius: 60px;
+    padding: 7px;
+    width: 100%;
+    transition: all 0.8s ease-in;
+}
+li:hover,li:active{
+    background-color: rgb(79, 79, 221);
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+li a:hover{
+    text-decoration: none;
+    color: white;
+}
+.nav-side{
+    background-color: rgb(99, 99, 233);
+    vertical-align: middle;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 4%;
+    width: auto;
+}
+.contain{
+    display: block;
+    float: right;
+    width: auto;
+}
