@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/index.css">
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/css/dataTables.bootstrap4.min.css">
+    <?php include("./public/css/linkcss.php")?>
     <title>Gestion Materiel</title>
 </head>
 <body>

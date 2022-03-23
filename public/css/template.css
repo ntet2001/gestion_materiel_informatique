@@ -5,14 +5,13 @@ ul{
 li{
     list-style: none;
     margin-top: 10%;
-    border: 1px solid rgb(99, 99, 233);
-    border-radius: 60px;
+    border: 1px solid rgb(79, 79, 221);
     padding: 7px;
     width: 100%;
-    transition: all 0.8s ease-in;
+    transition: all 0.7s ease-in;
 }
 li:hover,li:active{
-    background-color: rgb(79, 79, 221);
+    background-color:  rgb(103, 103, 241);
 }
 a{
     text-decoration: none;
@@ -25,17 +24,22 @@ li a:hover{
     color: white;
 }
 .nav-side{
-    background-color: rgb(99, 99, 233);
+    background-color: rgb(79, 79, 221);
     vertical-align: middle;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     padding-top: 4%;
+    padding-left: 0px;
+    padding-right: 0px;
     width: auto;
 }
 .contain{
-    display: block;
-    float: right;
     width: auto;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
