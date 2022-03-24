@@ -14,7 +14,8 @@
         <option value=""></option>
         <option value=""></option>
     </select><br>
-    <button type="submit" class="btn btn-primary">Insert</button>  <br><br>
+    <button type="reset" class="btn btn-success">Clear</button>
+    <button type="submit" class="btn btn-primary">Insert</button><br><br>
     </form>
 
     <table id="example" class="table table-hover table-bordered table-triped">

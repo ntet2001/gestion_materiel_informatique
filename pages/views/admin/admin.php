@@ -6,13 +6,14 @@
     <label for="">Email</label>
     <input type="text" class="form-control" value="">
     <label for="">Mot de Passe</label>
-    <input type="password" class="form-control" value=""><span></span>
+    <input type="password" class="form-control" value="" style="width:50%;">
     <label for="">Role</label>
     <select name="" id="" class="form-control">
         <option value="">manager</option>
         <option value="">admin</option>
     </select><br>
-    <button type="submit" class="btn btn-primary">Insert</button>  <br><br>
+    <button type="reset" class="btn btn-success">Clear</button>
+    <button type="submit" class="btn btn-primary">Insert</button><br><br>
     </form>
 
     <table id="example" class="table table-hover table-bordered table-triped">

@@ -15,7 +15,7 @@ inputNom.addEventListener('focus',()=> {
     labelnom.classList.remove('lb-up');
     upnom=false;
    }
-},false);
+},false); 
 
 inputPassword.addEventListener('focus',()=> {
     if (!upPassword) {
@@ -26,3 +26,13 @@ inputPassword.addEventListener('focus',()=> {
         upPassword=false;
     }
  },false);
+ 
+ inputPassword.addEventListener('input',function (e) {
+    if (e.target.value.length==8) {
+        verificationmdp.className='alert alert-success';
+        verificationmdp.textContent='Password is OK';
+    }else{
+        verificationmdp.className='alert alert-warning';
+        verificationmdp.textContent='08 characters are Required for the password';
+    }
+},false);

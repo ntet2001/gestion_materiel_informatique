@@ -7,6 +7,7 @@
     <input type="text" class="form-control" value="">
     <label for="">Adresse</label>
     <input type="text" class="form-control" value=""><br>
+    <button type="reset" class="btn btn-success">Clear</button>
     <button type="submit" class="btn btn-primary">Insert</button>  <br><br>
     </form>
 

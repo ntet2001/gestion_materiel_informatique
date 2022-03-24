@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 23 mars 2022 à 13:57
+-- Généré le : jeu. 24 mars 2022 à 08:18
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.4.9
 
@@ -145,6 +145,19 @@ CREATE TABLE IF NOT EXISTS `materiel` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `role`
+--
+
+DROP TABLE IF EXISTS `role`;
+CREATE TABLE IF NOT EXISTS `role` (
+  `id_role` int NOT NULL AUTO_INCREMENT,
+  `nom_role` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_role`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `type_materiel`
 --
 
@@ -167,9 +180,10 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nom_utilisateur` varchar(255) NOT NULL,
   `email_utilisateur` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL,
+  `role` int NOT NULL,
   `dateutilisateur` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_utilisateur`)
+  PRIMARY KEY (`id_utilisateur`),
+  KEY `role` (`role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -207,6 +221,12 @@ ALTER TABLE `livraison`
 --
 ALTER TABLE `materiel`
   ADD CONSTRAINT `fk_materiel_typemateriel` FOREIGN KEY (`typemateriel`) REFERENCES `type_materiel` (`id_typemateriel`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD CONSTRAINT `fk_utilisateur_role` FOREIGN KEY (`role`) REFERENCES `role` (`id_role`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
