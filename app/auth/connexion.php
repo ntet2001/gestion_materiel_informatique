@@ -63,7 +63,7 @@ use app\Fonction;
                                         $_SESSION['nom']=$nom;
                                         header('Location: ../../pages/views/template/template.php');
                                     }else {
-                                        header('Location: ./pages/views/manager/indexManager.php');
+                                        header('Location: ../../pages/views/manager/indexManager.php');
                                     }
 
                                 }else{
